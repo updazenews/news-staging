@@ -1,4 +1,4 @@
-import { getApp, getApps, initializeApp, type FirebaseApp } from 'firebase/app';
+import { getApp, getApps, initializeApp, type FirebaseApp, type FirebaseOptions } from 'firebase/app';
 import { getAnalytics, isSupported, type Analytics } from 'firebase/analytics';
 import { getAuth } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
@@ -23,7 +23,7 @@ const jobsConfig = {
   measurementId: process.env.NEXT_PUBLIC_JOBS_FIREBASE_MEASUREMENT_ID ?? 'G-WM1KXZD6DL'
 };
 
-function getOrInitApp(name: string, config: Parameters<typeof initializeApp>[0]): FirebaseApp {
+function getOrInitApp(name: string, config: FirebaseOptions): FirebaseApp {
   return getApps().some((app) => app.name === name) ? getApp(name) : initializeApp(config, name);
 }
 
