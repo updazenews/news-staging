@@ -9,13 +9,14 @@ npm install
 npm run dev
 ```
 
-## Deploy/test on GitHub Pages
+## Publish output to GitHub Pages
 
 This project is configured for static export and deploy via GitHub Actions.
 
-1. Push to `main`
-2. Workflow builds static files into `out/`
-3. GitHub Pages deploys the artifact
+1. In GitHub, go to **Settings → Pages**.
+2. Under **Build and deployment**, set **Source** to **GitHub Actions**.
+3. Push to `work` or `main`, or run the workflow manually.
+4. The action builds static files into `out/` and deploys that artifact.
 
 The base path is configured for this repo (`/news-staging`) via `NEXT_PUBLIC_BASE_PATH` in workflow.
 

@@ -2,7 +2,7 @@ name: Deploy Admin Portal to GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches: [main, work]
   workflow_dispatch:
 
 permissions:
@@ -28,6 +28,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
 
       - name: Restore Next.js build cache
         uses: actions/cache@v4
