@@ -20,7 +20,7 @@ export default function LoginPage() {
         }}
       />
       <p className="mt-4 text-center text-sm">
-        <Link className="text-blue-600 hover:underline" href="/reset-password">
+        <Link className="text-brand-blue hover:text-brand-ink hover:underline" href="/reset-password">
           Forgot password?
         </Link>
       </p>

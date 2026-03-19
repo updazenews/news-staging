@@ -6,8 +6,8 @@ export default function NewsPage() {
   return (
     <section className="space-y-4">
       <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-bold">News Articles</h1>
-        <Link className="bg-blue-600 text-white hover:bg-blue-500" href="/news/create">
+        <h1 className="text-2xl font-bold text-brand-ink">News Articles</h1>
+        <Link className="bg-brand-blue text-white hover:bg-brand-ink" href="/news/create">
           Create Article
         </Link>
       </div>

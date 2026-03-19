@@ -5,9 +5,9 @@ type DataTableProps = {
 
 export function DataTable({ columns, rows }: DataTableProps) {
   return (
-    <div className="overflow-x-auto rounded-xl border border-slate-200 bg-white shadow-sm">
+    <div className="overflow-x-auto rounded-xl border border-slate-200 bg-white shadow-soft">
       <table className="min-w-full text-left text-sm">
-        <thead className="bg-slate-50 text-slate-600">
+        <thead className="bg-brand-surface text-brand-slate">
           <tr>
             {columns.map((column) => (
               <th className="px-4 py-3 font-medium" key={column}>
@@ -20,7 +20,7 @@ export function DataTable({ columns, rows }: DataTableProps) {
           {rows.map((row, rowIndex) => (
             <tr className="border-t border-slate-100" key={rowIndex}>
               {row.map((cell, cellIndex) => (
-                <td className="px-4 py-3 text-slate-700" key={`${rowIndex}-${cellIndex}`}>
+                <td className="px-4 py-3 text-brand-ink" key={`${rowIndex}-${cellIndex}`}>
                   {cell}
                 </td>
               ))}

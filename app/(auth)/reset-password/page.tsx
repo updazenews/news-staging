@@ -16,7 +16,7 @@ export default function ResetPasswordPage() {
         }}
       />
       <p className="mt-4 text-center text-sm">
-        <Link className="text-blue-600 hover:underline" href="/login">
+        <Link className="text-brand-blue hover:text-brand-ink hover:underline" href="/login">
           Back to login
         </Link>
       </p>

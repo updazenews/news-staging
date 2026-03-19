@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import type { Role } from '@/lib/types';
+import { BrandBadge } from '@/components/BrandBadge';
 
 const links = [
   { href: '/dashboard', label: 'Dashboard' },
@@ -15,8 +16,10 @@ export function Sidebar({ role }: { role: Role }) {
   const pathname = usePathname();
 
   return (
-    <aside className="w-full border-r border-slate-200 bg-white p-4 md:w-64">
-      <h2 className="mb-6 text-xl font-bold">Admin Portal</h2>
+    <aside className="w-full border-r border-slate-200 bg-white p-4 md:w-72">
+      <div className="mb-8">
+        <BrandBadge />
+      </div>
       <nav className="space-y-2">
         {links
           .filter((link) => !link.role || link.role === role)
@@ -24,10 +27,10 @@ export function Sidebar({ role }: { role: Role }) {
             <Link
               key={link.href}
               href={link.href}
-              className={`block rounded-lg px-3 py-2 text-sm ${
+              className={`block rounded-lg px-3 py-2 text-sm font-medium ${
                 pathname === link.href || pathname.startsWith(`${link.href}/`)
-                  ? 'bg-blue-600 text-white'
-                  : 'text-slate-700 hover:bg-slate-100'
+                  ? 'bg-brand-blue text-white shadow-soft'
+                  : 'text-brand-slate hover:bg-brand-surface hover:text-brand-ink'
               }`}
             >
               {link.label}

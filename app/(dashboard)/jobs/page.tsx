@@ -6,8 +6,8 @@ export default function JobsPage() {
   return (
     <section className="space-y-4">
       <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-bold">Jobs (Sebenza)</h1>
-        <Link className="bg-blue-600 text-white hover:bg-blue-500" href="/jobs/create">
+        <h1 className="text-2xl font-bold text-brand-ink">Jobs (Sebenza)</h1>
+        <Link className="bg-brand-orange text-white hover:bg-brand-ink" href="/jobs/create">
           Create Job
         </Link>
       </div>
