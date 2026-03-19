@@ -1,3 +1,9 @@
+import { mockJobs } from '@/data/mock';
+
+export function generateStaticParams() {
+  return mockJobs.map((job) => ({ id: job.id }));
+}
+
 export default async function EditJobPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
 

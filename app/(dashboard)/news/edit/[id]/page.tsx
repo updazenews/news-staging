@@ -1,3 +1,9 @@
+import { mockArticles } from '@/data/mock';
+
+export function generateStaticParams() {
+  return mockArticles.map((article) => ({ id: article.id }));
+}
+
 export default async function EditArticlePage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
 
