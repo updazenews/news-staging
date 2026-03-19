@@ -44,8 +44,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build static export
+      - name: Build
         run: npm run build
+
+      - name: Export static files
+        run: npm run export
 
       - name: Upload pages artifact
         uses: actions/upload-pages-artifact@v3
