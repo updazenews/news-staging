@@ -6,12 +6,18 @@ import type { Role } from '@/lib/types';
 import { BrandBadge } from '@/components/BrandBadge';
 import { sebenzaPortalUrl } from '@/lib/firebase';
 
-const links = [
+type NavLink = {
+  href: '/dashboard' | '/news' | '/jobs' | '/users';
+  label: string;
+  role?: Role;
+};
+
+const links: NavLink[] = [
   { href: '/dashboard', label: 'Dashboard' },
   { href: '/news', label: 'News' },
   { href: '/jobs', label: 'Jobs' },
   { href: '/users', label: 'Users', role: 'superadmin' }
-] as const;
+];
 
 export function Sidebar({ role }: { role: Role }) {
   const pathname = usePathname();
